@@ -1,0 +1,126 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/06/2016 15:34
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+}
+
+.flaticon-alto-clef:before { content: "\f100"; }
+.flaticon-bar:before { content: "\f101"; }
+.flaticon-bass-clef:before { content: "\f102"; }
+.flaticon-bass-clef-1:before { content: "\f103"; }
+.flaticon-beam:before { content: "\f104"; }
+.flaticon-bold-double-bar-line:before { content: "\f105"; }
+.flaticon-bold-double-bar-line-1:before { content: "\f106"; }
+.flaticon-brace:before { content: "\f107"; }
+.flaticon-bracket:before { content: "\f108"; }
+.flaticon-breath-mark:before { content: "\f109"; }
+.flaticon-breve:before { content: "\f10a"; }
+.flaticon-caesura:before { content: "\f10b"; }
+.flaticon-caesura-1:before { content: "\f10c"; }
+.flaticon-coda:before { content: "\f10d"; }
+.flaticon-common-time:before { content: "\f10e"; }
+.flaticon-crescendo:before { content: "\f10f"; }
+.flaticon-cut-time:before { content: "\f110"; }
+.flaticon-diminuendo:before { content: "\f111"; }
+.flaticon-dotted-barline:before { content: "\f112"; }
+.flaticon-double-barline:before { content: "\f113"; }
+.flaticon-double-flat:before { content: "\f114"; }
+.flaticon-down-bow:before { content: "\f115"; }
+.flaticon-eight-note-rest:before { content: "\f116"; }
+.flaticon-eighth-note:before { content: "\f117"; }
+.flaticon-eighth-note-1:before { content: "\f118"; }
+.flaticon-eighth-note-2:before { content: "\f119"; }
+.flaticon-eighth-note-3:before { content: "\f11a"; }
+.flaticon-eighth-note-4:before { content: "\f11b"; }
+.flaticon-eighth-note-5:before { content: "\f11c"; }
+.flaticon-fermata:before { content: "\f11d"; }
+.flaticon-flat:before { content: "\f11e"; }
+.flaticon-flat-1:before { content: "\f11f"; }
+.flaticon-flat-2:before { content: "\f120"; }
+.flaticon-forte:before { content: "\f121"; }
+.flaticon-fortepiano:before { content: "\f122"; }
+.flaticon-fortissimo:before { content: "\f123"; }
+.flaticon-fortississimo:before { content: "\f124"; }
+.flaticon-half-note:before { content: "\f125"; }
+.flaticon-half-note-1:before { content: "\f126"; }
+.flaticon-half-note-2:before { content: "\f127"; }
+.flaticon-half-rest:before { content: "\f128"; }
+.flaticon-inverted-turn:before { content: "\f129"; }
+.flaticon-marcato:before { content: "\f12a"; }
+.flaticon-marcato-1:before { content: "\f12b"; }
+.flaticon-marcato-2:before { content: "\f12c"; }
+.flaticon-mezzoforte:before { content: "\f12d"; }
+.flaticon-mezzopiano:before { content: "\f12e"; }
+.flaticon-mordent:before { content: "\f12f"; }
+.flaticon-mordent-1:before { content: "\f130"; }
+.flaticon-natural:before { content: "\f131"; }
+.flaticon-natural-1:before { content: "\f132"; }
+.flaticon-natural-2:before { content: "\f133"; }
+.flaticon-octave:before { content: "\f134"; }
+.flaticon-octave-clef:before { content: "\f135"; }
+.flaticon-pause:before { content: "\f136"; }
+.flaticon-pianissimo:before { content: "\f137"; }
+.flaticon-pianississimo:before { content: "\f138"; }
+.flaticon-piano:before { content: "\f139"; }
+.flaticon-quarter:before { content: "\f13a"; }
+.flaticon-quarter-note:before { content: "\f13b"; }
+.flaticon-quarter-note-1:before { content: "\f13c"; }
+.flaticon-quarter-note-2:before { content: "\f13d"; }
+.flaticon-quarter-note-rest:before { content: "\f13e"; }
+.flaticon-quaver:before { content: "\f13f"; }
+.flaticon-quaver-1:before { content: "\f140"; }
+.flaticon-repeat-sign:before { content: "\f141"; }
+.flaticon-repeat-sign-1:before { content: "\f142"; }
+.flaticon-segno:before { content: "\f143"; }
+.flaticon-sharp:before { content: "\f144"; }
+.flaticon-sharp-1:before { content: "\f145"; }
+.flaticon-short-trill:before { content: "\f146"; }
+.flaticon-simile:before { content: "\f147"; }
+.flaticon-simile-1:before { content: "\f148"; }
+.flaticon-single-barline:before { content: "\f149"; }
+.flaticon-sixteenth-note:before { content: "\f14a"; }
+.flaticon-sixteenth-note-1:before { content: "\f14b"; }
+.flaticon-sixteenth-note-2:before { content: "\f14c"; }
+.flaticon-sixty-fourth-note:before { content: "\f14d"; }
+.flaticon-sixty-fourth-note-1:before { content: "\f14e"; }
+.flaticon-sixty-fourth-note-rest:before { content: "\f14f"; }
+.flaticon-stave:before { content: "\f150"; }
+.flaticon-stave-1:before { content: "\f151"; }
+.flaticon-stave-2:before { content: "\f152"; }
+.flaticon-stave-3:before { content: "\f153"; }
+.flaticon-stave-4:before { content: "\f154"; }
+.flaticon-stave-5:before { content: "\f155"; }
+.flaticon-thirty-second-note:before { content: "\f156"; }
+.flaticon-thirty-second-note-1:before { content: "\f157"; }
+.flaticon-thirty-second-note-rest:before { content: "\f158"; }
+.flaticon-tie:before { content: "\f159"; }
+.flaticon-treble-clef:before { content: "\f15a"; }
+.flaticon-trill:before { content: "\f15b"; }
+.flaticon-turn:before { content: "\f15c"; }
+.flaticon-unpitched-clef:before { content: "\f15d"; }
+.flaticon-unpitched-clef-1:before { content: "\f15e"; }
+.flaticon-up-bow:before { content: "\f15f"; }
+.flaticon-whole:before { content: "\f160"; }
+.flaticon-whole-1:before { content: "\f161"; }
+.flaticon-whole-rest:before { content: "\f162"; }
