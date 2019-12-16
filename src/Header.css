@@ -1,0 +1,16 @@
+h2{
+
+}
+
+i{
+}
+
+
+@media screen and (max-width: 1000px) {
+        h2 {
+            font-size: 1em;
+        }
+        i {
+            font-size: 0.5em;
+        }
+}

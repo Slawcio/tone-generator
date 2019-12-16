@@ -1,6 +1,23 @@
-.App {
-  text-align: center;
+.App-background {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    background-color: #282c34;
 }
+
+.App-containter {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 1000px;
+    height: 1000px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #009fcb;
+}
+
 
 .App-logo {
   height: 40vmin;

@@ -10,8 +10,8 @@ class PianoProvider extends React.Component {
         const lastNote = MidiNumbers.fromNote('c6');
 
         return (
+
                 <Piano
-                    className={'piano'}
                     noteRange={{ first: firstNote, last: lastNote }}
                     playNote={(midiNumber) => {
                         // Play a given note - see notes below
@@ -19,7 +19,8 @@ class PianoProvider extends React.Component {
                     stopNote={(midiNumber) => {
                         // Stop playing a given note - see notes below
                     }}
-                    width={1000}
+                    width={this.props.containerWidth}
+                    height={2000}
                 />
         );
     }
