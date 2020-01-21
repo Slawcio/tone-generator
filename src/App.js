@@ -8,7 +8,7 @@ import Header from "./Header";
 import DropdownKey from "./DropdownKey";
 import DropdownScale from "./DropdownScale"
 import SliderProvider from "./Slider";
-import ButtonPla from './ButtonPla';
+import ButtonPlay from './ButtonPlay';
 import './PianoProviderStyle.css';
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
                 <DropdownScale/>
             </div>
             <Divider value={'Play it!'}/>
-            <ButtonPla/>
+            <ButtonPlay/>
         </div>
       </div>
   );

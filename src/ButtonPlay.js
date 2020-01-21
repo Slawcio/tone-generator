@@ -13,7 +13,7 @@ const buttonStyle = {
     margin: '2.5px'
 };
 
-const ButtonPla = () => (
+const ButtonPlay = () => (
     <div style={style}>
         <Button style={buttonStyle} icon labelPosition='left'>
             Play
@@ -29,4 +29,4 @@ const ButtonPla = () => (
         </Button>
     </div>
 );
-export default ButtonPla
+export default ButtonPlay
