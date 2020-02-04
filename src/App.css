@@ -1,7 +1,7 @@
 .App-background {
     display: flex;
     justify-content: center;
-    height: auto;
+    height: -webkit-fill-available;
     padding: 10px;
     background-color: #282c34;
 }
@@ -11,11 +11,11 @@
     align-items: flex-start;
     flex-direction: column;
     width: 1000px;
-    height: 1000px;
+    height: fit-content;
     margin: 10px;
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
     border-radius: 10px;
-    background-color: #009fcb;
+    background-color: #45a8cb;
 }
 
 

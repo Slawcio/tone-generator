@@ -51,14 +51,15 @@ class SliderProvider extends React.Component {
 
     render(props) {
         return(
-            <div style={{width: '100%', margin: '0px 0 px 0'}}>
+            <div style={{width: '100%', margin: 'auto', display: 'flex', flexWrap: 'wrap'}}>
+                <h5 class='ui header' style={{marginTop: '9px', color: 'white', margin: '0 0 0 px', width: '7em'}}>{this.state.name}</h5>
             <Slider
             min={30}
             max={230}
             defaultValue={120}
             handle={this.handle}
             onChange={this.onChange}
-            style={{color: 'black'}}
+            style={{margin: '10px 0 10px 0', float: 'right', color: 'black', width: '80%'}}
             />
             </div>
         )

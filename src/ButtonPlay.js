@@ -30,3 +30,7 @@ const ButtonPlay = () => (
     </div>
 );
 export default ButtonPlay
+
+// <button type="button" onClick={this.play.bind(this)} >Play 2</button>
+// <button type="button" onClick={this.stopAll.bind(this)} >Stop</button>
+// <button type="button" onClick={this.testMethod.bind(this)} >Test</button>
