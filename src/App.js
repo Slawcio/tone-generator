@@ -11,6 +11,7 @@ import DropdownScale from "./DropdownScale"
 import SliderProvider from "./Slider";
 import ButtonPlay from './ButtonPlay';
 import './PianoProviderStyle.css';
+import Dropdown from './Dropdown';
 import SoundEngine from "./SoundEngine";
 
 function App() {

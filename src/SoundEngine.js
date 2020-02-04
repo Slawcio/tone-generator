@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import MIDISounds from 'midi-sounds-react';
-import { Button, Icon } from 'semantic-ui-react'
+import Dropdown, { Button, Icon } from 'semantic-ui-react'
 
 
 const BPM = 110;
@@ -78,6 +78,8 @@ class SoundEngine extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            RIGHT_INSTRUMENT: 5,
+            LEFT_INSTRUMENT: 5,
             sections: [
                 {
                     RIGHT_DURATION: {
@@ -584,7 +586,7 @@ class SoundEngine extends Component {
                     this.state.sections[section].RIGHT_DURATION,
                     this.state.sections[section].RIGHT_HARMONY,
                     true,
-                    RIGHT_INSTRUMENT));
+                    this.state.RIGHT_INSTRUMENT));
                 leftHand = leftHand.concat(this.t_ComposeMelody(
                     BARS,
                     SCALE,
@@ -593,7 +595,7 @@ class SoundEngine extends Component {
                     this.state.sections[section].LEFT_DURATION,
                     this.state.sections[section].LEFT_HARMONY,
                     false,
-                    LEFT_INSTRUMENT)
+                    this.state.LEFT_INSTRUMENT)
                 );
             }
             b_firstTimeRight = false;
@@ -606,7 +608,7 @@ class SoundEngine extends Component {
                     this.state.sections[section].RIGHT_DURATION,
                     this.state.sections[section].RIGHT_HARMONY,
                     true,
-                    RIGHT_INSTRUMENT));
+                    this.state.RIGHT_INSTRUMENT));
                 leftHand = leftHand.concat(this.t_ComposeMelody(
                     BARS,
                     SCALE,
@@ -615,7 +617,7 @@ class SoundEngine extends Component {
                     this.state.sections[section].LEFT_DURATION,
                     this.state.sections[section].LEFT_HARMONY,
                     false,
-                    LEFT_INSTRUMENT)
+                    this.state.LEFT_INSTRUMENT)
                 );
             }
             section = this.o_Section(section);
@@ -715,6 +717,7 @@ class SoundEngine extends Component {
                         {/*    Download*/}
                         {/*    <Icon name='download' />*/}
                         {/*</Button>*/}
+                        <select value={this.state.selectedInstrument} onChange={this.onSelectInstrument.bind(this)}>{this.createSelectItems()}</select>
                     </div>
                 </p>
                 <div style={MidiStyle}>
@@ -726,6 +729,27 @@ class SoundEngine extends Component {
         );
     }
 
+    onSelectInstrument(e){
+        var list=e.target;
+        let n = list.options[list.selectedIndex].getAttribute("value");
+        this.setState({
+            RIGHT_INSTRUMENT: n
+        });
+        this.rightHand.cacheInstrument(n);
+        this.stopAll();
+    }
+
+    createSelectItems() {
+        if (this.rightHand) {
+            if (!(this.items)) {
+                this.items = [];
+                for (let i = 0; i < this.rightHand.player.loader.instrumentKeys().length; i++) {
+                    this.items.push(<option key={i} value={i}>{'' + (i + 0) + '. ' + this.rightHand.player.loader.instrumentInfo(i).title}</option>);
+                }
+            }
+            return this.items;
+        }
+    }
 
 }
 
