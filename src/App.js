@@ -46,12 +46,10 @@ function App() {
                 <Divider style={{marginBottom: '100px', width: '10em'}} value={'Choose scale and key'}/>
                 <DropdownKey/>
                 <DropdownScale/>
-                <Divider style={{marginBottom: '100px', width: '10em'}} value={'Choose first and second instrument'}/>
-                <DropdownKey/>
-                <DropdownScale/>
+
             </div>
             <div style={dropdown}>
-            <Divider value={'Play it!'}/>
+
             <SoundEngine style={dropdown}/>
             </div>
         </div>

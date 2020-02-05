@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import MIDISounds from 'midi-sounds-react';
 import Dropdown, { Button, Icon } from 'semantic-ui-react'
+import Divider from "./Divider";
+import DropdownKey from "./DropdownKey";
+import DropdownScale from "./DropdownScale";
 
 
 const BPM = 110;
@@ -704,6 +707,10 @@ class SoundEngine extends Component {
         return (
             <div className="App">
                 <p>
+                    <Divider style={{marginBottom: '100px', width: '10em'}} value={'Choose first and second instrument'}/>
+                    <select value={this.state.RIGHT_INSTRUMENT} onChange={this.onSelectInstrumentRight.bind(this)}>{this.createSelectItemsRight()}</select>
+                    <select value={this.state.LEFT_INSTRUMENT} onChange={this.onSelectInstrumentLeft.bind(this)}>{this.createSelectItemsLeft()}</select>
+                    <Divider value={'Play it!'}/>
                     <div style={style}>
                         <Button style={buttonStyle} icon labelPosition='left' onClick={this.play.bind(this)}>
                             Play
@@ -717,7 +724,6 @@ class SoundEngine extends Component {
                         {/*    Download*/}
                         {/*    <Icon name='download' />*/}
                         {/*</Button>*/}
-                        <select value={this.state.selectedInstrument} onChange={this.onSelectInstrument.bind(this)}>{this.createSelectItems()}</select>
                     </div>
                 </p>
                 <div style={MidiStyle}>
@@ -729,7 +735,7 @@ class SoundEngine extends Component {
         );
     }
 
-    onSelectInstrument(e){
+    onSelectInstrumentRight(e){
         var list=e.target;
         let n = list.options[list.selectedIndex].getAttribute("value");
         this.setState({
@@ -739,12 +745,34 @@ class SoundEngine extends Component {
         this.stopAll();
     }
 
-    createSelectItems() {
+    createSelectItemsRight() {
         if (this.rightHand) {
             if (!(this.items)) {
                 this.items = [];
                 for (let i = 0; i < this.rightHand.player.loader.instrumentKeys().length; i++) {
                     this.items.push(<option key={i} value={i}>{'' + (i + 0) + '. ' + this.rightHand.player.loader.instrumentInfo(i).title}</option>);
+                }
+            }
+            return this.items;
+        }
+    }
+
+    onSelectInstrumentLeft(e){
+        var list=e.target;
+        let n = list.options[list.selectedIndex].getAttribute("value");
+        this.setState({
+            LEFT_INSTRUMENT: n
+        });
+        this.leftHand.cacheInstrument(n);
+        this.stopAll();
+    }
+
+    createSelectItemsLeft() {
+        if (this.leftHand) {
+            if (!(this.items)) {
+                this.items = [];
+                for (let i = 0; i < this.leftHand.player.loader.instrumentKeys().length; i++) {
+                    this.items.push(<option key={i} value={i}>{'' + (i + 0) + '. ' + this.leftHand.player.loader.instrumentInfo(i).title}</option>);
                 }
             }
             return this.items;
