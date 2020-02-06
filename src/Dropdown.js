@@ -7,15 +7,15 @@ import { Dropdown } from 'semantic-ui-react'
       display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        width: '15em',
+        width: '20em',
         margin: '2.5px'
     };
 
 const DropdownKey = (props) => (
     <Dropdown
-        placeholder='Select Key'
+        placeholder='Select right instrument'
         fluid
-        selection={5}
+        selection={props.value}
         options={props.options}
         style={style}
     />

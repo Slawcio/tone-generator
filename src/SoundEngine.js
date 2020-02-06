@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import MIDISounds from 'midi-sounds-react';
-import Dropdown, { Button, Icon } from 'semantic-ui-react'
+import { Button, Icon } from 'semantic-ui-react'
 import Divider from "./Divider";
+import Dropdown from "./Dropdown"
 import DropdownKey from "./DropdownKey";
 import DropdownScale from "./DropdownScale";
 
@@ -704,12 +705,20 @@ class SoundEngine extends Component {
         const MidiStyle = {
             display: 'none',
         };
+
+        const dropdown = {
+            display: 'flex',
+            justifyContent: 'center',
+            width: '100%',
+            flexWrap: 'wrap',
+            flexDirection: 'row'
+        };
         return (
             <div className="App">
                 <p>
                     <Divider style={{marginBottom: '100px', width: '10em'}} value={'Choose first and second instrument'}/>
-                    <select value={this.state.RIGHT_INSTRUMENT} onChange={this.onSelectInstrumentRight.bind(this)}>{this.createSelectItemsRight()}</select>
-                    <select value={this.state.LEFT_INSTRUMENT} onChange={this.onSelectInstrumentLeft.bind(this)}>{this.createSelectItemsLeft()}</select>
+                    <select style={dropdown} value={this.state.RIGHT_INSTRUMENT} onChange={this.onSelectInstrumentRight.bind(this)}>{this.createSelectItemsRight()}</select>
+                    <select style={dropdown} value={this.state.LEFT_INSTRUMENT} onChange={this.onSelectInstrumentLeft.bind(this)}>{this.createSelectItemsLeft()}</select>
                     <Divider value={'Play it!'}/>
                     <div style={style}>
                         <Button style={buttonStyle} icon labelPosition='left' onClick={this.play.bind(this)}>
